@@ -1,0 +1,13 @@
+numpy
+pandas
+flask
+seaborn
+matplotlib
+sklearn
+pysqlite3
+dill
+joblib
+python-dotenv
+pymongo
+#python=3.12
+#- e.
