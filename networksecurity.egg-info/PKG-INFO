@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: networksecurity
+Version: 0.0.1
+Author: MD ALTAF HOSSAIN SUNNY
+Author-email: www.altafhossainsunny@email.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: flask
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: pysqlite3
+Requires-Dist: dill
+Requires-Dist: joblib
+Requires-Dist: python-dotenv
+Requires-Dist: pymongo
+Requires-Dist: setuptools
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist

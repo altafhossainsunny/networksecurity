@@ -9,6 +9,4 @@ dill
 joblib
 python-dotenv
 pymongo
-certifi
 setuptools
-#-e .
