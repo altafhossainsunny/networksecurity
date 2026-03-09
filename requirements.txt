@@ -8,7 +8,7 @@ pysqlite3
 dill
 joblib
 python-dotenv
-pymongo
+pymongo[srv]>=4.6
 certifi
 setuptools
-#-e .
+-e .
