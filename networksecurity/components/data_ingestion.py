@@ -36,10 +36,16 @@ class DataIngestion:
             collection_name = self.mongo_client[database_name][collection_name]
 
             dataframe = pd.DataFrame(list(collection_name.find()))
+            if dataframe.empty:
+                raise ValueError(
+                    f"No data found in MongoDB collection '{self.data_ingestion_config.collection_name}' "
+                    f"in database '{self.data_ingestion_config.database_name}'. "
+                    "Please ensure the collection has been populated before running the pipeline."
+                )
             if "_id" in dataframe.columns:
                 dataframe = dataframe.drop(columns=["_id"])
             dataframe.replace({"null": np.nan}, inplace=True)
-
+            logging.info(f"Fetched {len(dataframe)} records from MongoDB.")
             return dataframe
         
 
@@ -65,7 +71,7 @@ class DataIngestion:
         try:
             train_set, test_set = train_test_split(
                 dataframe,
-                test_size=self.data_ingestion_config.train_test_split_ratio,
+                test_size=1 - self.data_ingestion_config.train_test_split_ratio,
                 random_state=42
             )
             logging.info("Performed train test split on the data")

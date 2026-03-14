@@ -63,7 +63,4 @@ if __name__== "__main__":
     no_of_records = obj.insert_data_to_mongodb(record, DATABASE, COLLECTION)
     print(f"Number of records inserted: {no_of_records}")
 
-    logging.info("Data insertion process started")
-
-    number_of_records=obj.insert_data_to_mongodb(record, DATABASE, COLLECTION)
-    print(f"Number of records inserted: {number_of_records}")
+    logging.info("Data insertion process completed.")
