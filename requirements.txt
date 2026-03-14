@@ -11,4 +11,6 @@ python-dotenv
 pymongo[srv]>=4.6
 certifi
 setuptools
--e .
+scipy
+pyyaml
+#-e .
