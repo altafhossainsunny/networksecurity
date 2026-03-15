@@ -5,12 +5,13 @@ seaborn
 matplotlib
 scikit-learn
 pysqlite3
-pickle
 joblib
 python-dotenv
 pymongo[srv]>=4.6
 certifi
 setuptools
 scipy
+mlflow
+dagshub
 pyyaml
 #-e .
